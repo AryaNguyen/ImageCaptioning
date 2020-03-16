@@ -31,10 +31,13 @@ ImageCaptioning_LSTM
 |   |   ...
 |   |
 |   
-└───pytorch
+└───src
     |   datasets.py
     |   eval.py
     |   models.py
     │   train.py
     │   utils.py
 ```
+
+- **WORDMAP_coco_5_cap_per_img_5_min_word_freq.json**: Vocabulary dictionary where keys are numbers and values are unique words
+- **TRAIN_IMAGES_coco_5_cap_per_img_5_min_word_freq.hdf5**: 
