@@ -21,13 +21,13 @@ ImageCaptioning_LSTM
 │   |   │   captions_train2014.json
 │   |   │   captions_val2014.json
 │   |   
-│   └───train2014
+│   └───train2014 // trainning images folder
 |   |   ...
 |   |
-|   └───val2014
+|   └───val2014 // valuating images folder
 |   |   ...
 |   |
-|   └───test2014
+|   └───test2014 // testing images folder
 |   |   ...
 |   |
 |   
@@ -40,4 +40,7 @@ ImageCaptioning_LSTM
 ```
 
 - **WORDMAP_coco_5_cap_per_img_5_min_word_freq.json**: Vocabulary dictionary where keys are numbers and values are unique words
+```json
+{"a": 1, "man": 2, "with": 3, "red": 4, "helmet": 5,...}
+```
 - **TRAIN_IMAGES_coco_5_cap_per_img_5_min_word_freq.hdf5**: 
