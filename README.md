@@ -1,7 +1,7 @@
 # Image Captioning (CNN, LSTM) - Pytorch
 This project implements [Show, Attend, and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044) paper using PyTorch (1.4.0) Python API. 
 <br><br>
-The model is tranined on MS-COCO dataset. The instruction on how to download and preprocess the data can be found [here]().
+The model is tranined on MS-COCO dataset. The instruction on how to download and preprocess the data can be found [here](https://github.com/AryaNguyen/ImageCaptioning/blob/master/DATA_explain.md).
 <br><br>
 I'm a beginner in AI/ML. I want to explore the application of Computer Vision and Deep Learning, and I found Image Captioning is an interesting topic to start with. I haven't take any classes in AI, ML, or computer vision; therefore, I'll explain a lot of things that you might know for the purpose of learning.
 
@@ -24,6 +24,8 @@ class Encoder(nn.Module):
 
         # add layer to resize images to <encoded_image_size>
         self.adaptive_pool = nn.AdaptiveAvg2dPool((encoded_image_size, encoded_image_size))
+        
+        self.fine_tune()
 
     def forward(self, images)
         out = self.resnet(images)
