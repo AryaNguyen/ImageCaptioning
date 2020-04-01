@@ -46,8 +46,8 @@ def load_json(file, split, save_path):
 
 
 if __name__ == "__main__":
-    json_file = r"C:\Users\quynh\Desktop\GitHub\ImageCaptioning_LSTM\data\annotations\captions_val2014.json"
-    save_path = r"C:\Users\quynh\Desktop\GitHub\ImageCaptioning\data\coco_captions_val2014.json"
+    json_file = r"C:\Users\quynh\Desktop\GitHub\ImageCaptioning_LSTM\data\annotations\captions_train2014.json"
+    save_path = r"C:\Users\quynh\Desktop\GitHub\ImageCaptioning\data\coco_captions_train2014.json"
     load_json(json_file, "train", save_path)
 
 
