@@ -5,6 +5,12 @@ The model is tranined on MS-COCO dataset. The instruction on how to download and
 <br><br>
 I'm a beginner in AI/ML. I want to explore the application of Computer Vision and Deep Learning, and I found Image Captioning is an interesting topic to start with. I haven't take any classes in AI, ML, or computer vision; therefore, for the purpose of learning, I'll explain a lot of things that you might know .
 
+## Overview
+![Diagram of Image Captioning Step](img/steps_diagram.png)
+Figure 1: Diagram of Image Captioning Steps
+<br><br>
+
+
 ## Encoder
 ```python
 import torch
@@ -79,6 +85,8 @@ By default, all of the parameters in the pretrained model's children have ```.re
 ## Attention
 
 ## Decoder
+
+## Result
 
 ## References
 - Deep Residual Learning for Image Recognition
