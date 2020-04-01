@@ -10,23 +10,32 @@ import torchvision
 
 
 class Encoder(nn.Module):
+    """  An CNN model to convert RGB image to vector
+    """
     def __init__(self, encoded_image_size):
+        """ Define attributes & layers
+
+        :param encoded_image_size: (int)
+        """
         super(Encoder, self).__init__()
 
-        # pretrained resnet
+        # pretrained resnet-18 without the last 2 layers
         resnet = torchvision.models.resnet152(pretrained=True)
-
-        # remove the last two layers of the resnet model
         modules = resnet.children()[:-2]
         self.resnet = nn.Sequential(modules)
 
-        # Resize image to fixed size
+        # add layer to resize images to <encoded_image_size>
         self.adaptive_pool = nn.AdaptiveAvgPool2d((encoded_image_size, encoded_image_size))
 
         # fine tune
         self.fine_tune()
 
     def forward(self, images):
+        """ Forward propagation
+
+        :param images: tensor of dimension (batch_size, 3, image_size, image_size)
+        :return: tensor (batch_size, encoded_image_size, encoded_image_size, 512)
+        """
         out = self.resnet(images)
         out = self.adaptive_pool(out)
         out = out.permute((0, 2, 3, 1))
