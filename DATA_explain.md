@@ -40,7 +40,58 @@ ImageCaptioning_LSTM
 ```
 
 - **WORDMAP_coco_5_cap_per_img_5_min_word_freq.json**: Vocabulary dictionary where keys are numbers and values are unique words
-```json
+```
 {"a": 1, "man": 2, "with": 3, "red": 4, "helmet": 5,...}
 ```
 - **TRAIN_IMAGES_coco_5_cap_per_img_5_min_word_freq.hdf5**: 
+- **caption_datasets/dataset_coco.json**
+```json
+{
+  "images": 
+    [
+      {
+      "filepath":  "val2014",
+      "sentids": [770337, 771687, 772707, 776154, 781998],
+      "filename": "COCO_val2014_000000391895.jpg",
+      "imgrid": 0,
+      "split": "test",
+      "sentences": 
+        [
+          {"tokens": ["a", "man", "with", "a", "red", "helmet", "on", "a", "small", "moped", "on", "a", "dirt", "road"], "raw": "A man with a red helmet on a small moped on a dirt road. ", "imgid": 0, "sentid": 770337}, 
+          {"tokens": ["man", "riding", "a", "motor", "bike", "on", "a", "dirt", "road", "on", "the", "countryside"], "raw": "Man riding a motor bike on a dirt road on the countryside.", "imgid": 0, "sentid": 771687}, 
+          {"tokens": ["a", "man", "riding", "on", "the", "back", "of", "a", "motorcycle"], "raw": "A man riding on the back of a motorcycle.", "imgid": 0, "sentid": 772707}, 
+          {"tokens": ["a", "dirt", "path", "with", "a", "young", "person", "on", "a", "motor", "bike", "rests", "to", "the", "foreground", "of", "a", "verdant", "area", "with", "a", "bridge", "and", "a", "background", "of", "cloud", "wreathed", "mountains"], "raw": "A dirt path with a young person on a motor bike rests to the foreground of a verdant area with a bridge and a background of cloud-wreathed mountains. ", "imgid": 0, "sentid": 776154}, 
+          {"tokens": ["a", "man", "in", "a", "red", "shirt", "and", "a", "red", "hat", "is", "on", "a", "motorcycle", "on", "a", "hill", "side"], "raw": "A man in a red shirt and a red hat is on a motorcycle on a hill side.", "imgid": 0, "sentid": 781998}
+        ],
+      "cocoid": 391895
+      }
+    ],
+  "data":  "coco"
+}
+```
+- **annotations/caption_train2014.json**
+```json
+{
+  "info": {},
+  "images": [
+    {
+      "license": 5,
+      "file_name": "COCO_train2014_000000057870.jpg",
+      "coco_url": "http://images.cocodataset.org/train2014/COCO_train2014_000000057870.jpg",
+      "height": 480,
+      "weight": 640,
+      "date_capture": "2013-11-14 16:28:13",
+      "flickr_url": "http://farm4.staticflickr.com/3153/2970773875_164f0c0b83_z.jpg",
+      "id": 57870
+    }
+  ],
+  "licenses": [],
+  "annotations": [
+    {
+      "image_id": 318556,
+      "id": 48,
+      "caption": "A very clean and well decorated empty bathroom"
+    } 
+  ]
+}
+```
