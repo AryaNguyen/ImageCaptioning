@@ -51,10 +51,20 @@ class Encoder(nn.Module):
 
 
 class Attention(nn.Module):
-    def __init__(self):
+    """ Attention Network
+    """
+    def __init__(self, encoder_dim, decoder_dim, attention_dim):
+        """ Define attributes and layers
+
+        :param encoder_dim: dimension of encoded images
+        :param decoder_dim: dimension of decoded images
+        :param attention_dim: dimension of attention network
+        """
         super(Attention, self).__init__()
+        self.encoder_att = nn.Linear()
 
     def forward(self, ):
+        pass
 
 
 class Decoder(nn.Module):
